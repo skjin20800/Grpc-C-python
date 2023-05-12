@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>199ed210-08a8-4935-9cc8-9d8b0a9583ba</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\greet.proto" />
+    <None Remove="Protos\ImageProcessing.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Google.Protobuf" Version="3.23.0" />
+	  <PackageReference Include="Grpc.Net.Client" Version="2.53.0" />
+	  <PackageReference Include="Grpc.Tools" Version="2.54.0" />
+	  <PackageReference Include="OpenCvSharp4" Version="4.7.0.20230115" />
+	  <PackageReference Include="OpenCvSharp4.Extensions" Version="4.7.0.20230115" />
+	  <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.7.0.20230115" />
+	  <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<Protobuf Include="Protos\ImageProcessing.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/ImageProcessing.cs \
+obj\Debug\net6.0\Protos/ImageProcessingGrpc.cs: Protos/ImageProcessing.proto

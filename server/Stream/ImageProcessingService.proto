@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "ImageProcessing";
+
+message ImageRequest {
+  bytes image1 = 1;
+  bytes image2 = 2;
+}
+
+message ImageResponse {
+  bytes result_image1 = 1;
+  bytes result_image2 = 2;
+  int32 value = 3;
+}
+
+service ImageProcessingService {
+  rpc ProcessImages (ImageRequest) returns (stream ImageResponse) {}
+}
